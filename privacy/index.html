@@ -10,7 +10,7 @@
 <div style="max-width:900px;margin:0 auto;padding:40px;">
   <h1>プライバシーポリシー</h1>
 
-  <p>最終更新日: 2026年11月17日</p>
+  <p>最終更新日: 2026年11月18日</p>
 
   <p>
     Plusup Worksは、ユーザーのプライバシーを尊重します。<br>
@@ -187,15 +187,16 @@
 <p>コンピューターの思考は端末内で行います。これらの情報を開発者のサーバーへ送信する機能はなく、アカウント登録もありません。端末やOSの設定によっては、OSのバックアップ・復元の対象になります。</p>
 <p>このほか、後述の広告SDK・同意管理SDKも、動作に必要な情報を端末内に保存します。同意管理SDKは、前回の起動時の同意の状態を次回以降の起動でも使用します。</p>
 <h3>広告と外部サービス</h3>
-<p>Google AdMob（Google Mobile Ads SDK）を使用して、タイトル・対戦設定・対局・リザルトの画面にバナー広告を表示します。Googleの公開資料およびSDKに同梱されたGoogleの申告（Appleのプライバシーマニフェスト）によれば、同SDKは、IPアドレスから推定されるものを含むおおよその位置情報、広告識別子やアプリ・開発者単位の識別子などの端末に関する識別子、表示された広告などの広告データ、アプリの起動やタップなどの操作情報、起動時間などのパフォーマンスデータ、クラッシュなどの診断情報を、広告の配信、分析などのために取得・処理する場合があります。本アプリは位置情報の利用許可を求めません。</p>
+<p>Google AdMob（Google Mobile Ads SDK）を使用して、各画面の下部にバナー広告を表示します。また、対局の終了後、リザルトの画面で「もう一度」または「タイトルへ」を選んだときに、画面全体に表示される広告（インタースティシャル広告）を表示する場合があります。インタースティシャル広告は1回の対局の結果につき1回までで、対局中やリザルトの画面が表示された時点では表示しません。広告を閉じると、選んだ操作に進みます。Googleの公開資料およびSDKに同梱されたGoogleの申告（Appleのプライバシーマニフェスト）によれば、同SDKは、IPアドレスから推定されるものを含むおおよその位置情報、広告識別子やアプリ・開発者単位の識別子などの端末に関する識別子、表示された広告などの広告データ、アプリの起動やタップなどの操作情報、起動時間などのパフォーマンスデータ、クラッシュなどの診断情報を、広告の配信、分析などのために取得・処理する場合があります。本アプリは位置情報の利用許可を求めません。</p>
 <p>詳しくは<a href="https://policies.google.com/privacy?hl=ja">Googleのプライバシーポリシー</a>および<a href="https://developers.google.com/admob/ios/privacy/data-disclosure?hl=ja">Google Mobile Ads SDKのデータ開示情報</a>をご確認ください。</p>
 <p>広告に関する同意の確認には、GoogleのUser Messaging Platform（UMP）SDKを使用します。同SDKに同梱されたGoogleの申告では、同SDKはおおよその位置情報、パフォーマンスデータ、アプリ内の操作情報をアプリの機能のために取得し、これらを利用者の身元と結び付けず、トラッキングにも使用しないとされています。</p>
 <p>広告とその同意の確認のほかに、本アプリが外部と通信する機能はありません。Google Mobile Ads SDKとUMP SDKのほかに、利用状況の解析SDKは導入していません。</p>
 <h3>トラッキングについて</h3>
-<p>本アプリは、ATT（App Tracking Transparency）によるトラッキングの許可を求めません。Appleの仕様では、この許可がない場合、アプリは広告識別子（IDFA）を取得できません。また、Google Mobile Ads SDKのpublisher first-party ID（同じ開発元のアプリ間で使われる識別子）を無効にしています。</p>
-<p>なお、トラッキングの許可を求めないことは、データを取得しないことを意味しません。上記のとおり、広告SDKは広告の配信などのために情報を取得・処理します。</p>
+<p>本アプリは、初めて広告を読み込む前に、ATT（App Tracking Transparency）によるトラッキングの許可を一度だけ求めます。許可するかどうかにかかわらず、アプリのすべての機能を利用できます。選択は、端末の「設定」アプリのプライバシーの設定からいつでも変更できます。</p>
+<p>許可した場合、Google Mobile Ads SDKは広告識別子（IDFA）を広告のリクエストに使用し、興味に合わせた広告の表示や広告の効果の測定に使用する場合があります。許可しない場合、Appleの仕様により、アプリは広告識別子を取得できません。Google Mobile Ads SDKに同梱されたGoogleの申告では、端末に関する識別子をトラッキングに使用する場合があるとされています。また、Google Mobile Ads SDKのpublisher first-party ID（同じ開発元のアプリ間で使われる識別子）は無効にしています。</p>
+<p>なお、トラッキングを許可しないことは、データを取得しないことを意味しません。上記のとおり、広告SDKは広告の配信などのために情報を取得・処理します。</p>
 <h3>広告に関する設定と選択</h3>
-<p>起動時にUMPで同意情報を確認し、同意画面の表示が必要とUMPが判定した場合にだけ、同意画面を表示します。同意の確認が終わり、広告のリクエストが可能と判定されるまで、広告を読み込みません。設定の変更の入口が必要とUMPが判定した場合は、設定画面に「広告のプライバシー設定」が表示され、選択内容を変更できます。変更により広告のリクエストができなくなった場合は、広告を表示しません。</p>
+<p>起動時にUMPで同意情報を確認し、同意画面の表示が必要とUMPが判定した場合にだけ、同意画面を表示します。同意の確認が終わり、広告のリクエストが可能と判定され、トラッキングの許可について回答するまで、広告を読み込みません。設定の変更の入口が必要とUMPが判定した場合は、設定画面に「広告のプライバシー設定」が表示され、選択内容を変更できます。変更により広告のリクエストができなくなった場合は、広告を表示しません。</p>
 <p>Googleの説明によれば、同意の状態や地域によっては、Googleが個人データを広告のパーソナライズに使わない「制限付き広告」を配信しようとする場合があります。その場合も、IPアドレスは広告の配信に使用されます。本アプリは、すべての広告リクエストで制限付き広告を求める設定は行っていません。</p>
 <h3>データの保持と削除</h3>
 <p>端末内の保存データは、アプリ本体の削除により削除できます。OSのバックアップ内の情報は、各サービスの設定で管理してください。広告サービスが取得した情報の保持・削除は、各サービスのポリシーをご確認ください。</p>
@@ -216,15 +217,16 @@
 <p>The computer opponent runs on your device. The app has no feature that sends this data to the developer's servers, and there are no accounts. Depending on your device and system settings, this data may be included in system backups and restores.</p>
 <p>The ad SDK and the consent management SDK described below also store information they need on your device. The consent management SDK uses your consent status from the previous launch at later launches.</p>
 <h3>Ads and third-party services</h3>
-<p>Reversi Plus uses Google AdMob (Google Mobile Ads SDK) to show banner ads on the title, game setup, game, and results screens. According to Google's published disclosures and Google's declarations bundled with the SDK (Apple privacy manifests), the SDK may collect and process approximate location (including location estimated from your IP address), device identifiers such as the advertising identifier or identifiers scoped to an app or developer, advertising data such as ads you have seen, interactions within the app such as launches and taps, performance data such as launch time, and diagnostic data such as crashes, for purposes including ad delivery and analytics. The app does not ask for permission to use your location.</p>
+<p>Reversi Plus uses Google AdMob (Google Mobile Ads SDK) to show banner ads at the bottom of each screen. After a game ends, the app may also show a full-screen ad (interstitial ad) when you choose "Play Again" or "Main Menu" on the results screen. Interstitial ads are shown at most once per game result, and never during a game or at the moment the results screen appears. When you close the ad, the app continues with your choice. According to Google's published disclosures and Google's declarations bundled with the SDK (Apple privacy manifests), the SDK may collect and process approximate location (including location estimated from your IP address), device identifiers such as the advertising identifier or identifiers scoped to an app or developer, advertising data such as ads you have seen, interactions within the app such as launches and taps, performance data such as launch time, and diagnostic data such as crashes, for purposes including ad delivery and analytics. The app does not ask for permission to use your location.</p>
 <p>For details, see <a href="https://policies.google.com/privacy?hl=en">Google's Privacy Policy</a> and <a href="https://developers.google.com/admob/ios/privacy/data-disclosure?hl=en">Google Mobile Ads SDK data disclosure</a>.</p>
 <p>The app uses Google's User Messaging Platform (UMP) SDK to check ad consent. In Google's declaration bundled with the SDK, the SDK collects approximate location, performance data, and interactions within the app for app functionality, does not link this data to your identity, and does not use it for tracking.</p>
 <p>Apart from ads and the consent check, the app has no feature that communicates with external services. Apart from the Google Mobile Ads SDK and the UMP SDK, the app includes no usage analytics SDK.</p>
 <h3>Tracking</h3>
-<p>The app does not ask for permission to track through App Tracking Transparency (ATT). Under Apple's rules, without this permission an app cannot obtain the advertising identifier (IDFA). The app also turns off the Google Mobile Ads SDK's publisher first-party ID (an identifier used across apps from the same publisher).</p>
-<p>Not asking for permission to track does not mean that no data is collected. As described above, the ad SDK collects and processes information for purposes such as ad delivery.</p>
+<p>Before loading ads for the first time, the app asks once for permission to track through App Tracking Transparency (ATT). You can use every feature of the app whether or not you allow tracking. You can change your choice at any time in the privacy settings of your device's Settings app.</p>
+<p>If you allow tracking, the Google Mobile Ads SDK uses the advertising identifier (IDFA) in ad requests and may use it to show ads that match your interests and to measure ad performance. If you do not allow tracking, Apple's rules prevent the app from obtaining the advertising identifier. In Google's declaration bundled with the Google Mobile Ads SDK, device identifiers may be used for tracking. The app also turns off the Google Mobile Ads SDK's publisher first-party ID (an identifier used across apps from the same publisher).</p>
+<p>Not allowing tracking does not mean that no data is collected. As described above, the ad SDK collects and processes information for purposes such as ad delivery.</p>
 <h3>Ad settings and your choices</h3>
-<p>At launch, the app uses UMP to check your consent information and shows a consent form only when UMP determines that one is required. The app does not load ads until the consent check is finished and ad requests are allowed. When UMP determines that an entry point for changing your choices is required, Settings show "Ad Privacy Settings," where you can change your choices. If your changes mean that ads can no longer be requested, the app does not show ads.</p>
+<p>At launch, the app uses UMP to check your consent information and shows a consent form only when UMP determines that one is required. The app does not load ads until the consent check is finished, ad requests are allowed, and you have answered the tracking permission request. When UMP determines that an entry point for changing your choices is required, Settings show "Ad Privacy Settings," where you can change your choices. If your changes mean that ads can no longer be requested, the app does not show ads.</p>
 <p>According to Google, depending on your consent status and region, Google may try to serve "limited ads," which do not use personal data to personalize ads. Even then, your IP address is used to deliver ads. The app is not set to request limited ads for every ad request.</p>
 <h3>Data retention and deletion</h3>
 <p>Deleting the app deletes the data stored on your device. Manage data in system backups through the settings of the backup service. For data collected by ad services, see their policies.</p>
