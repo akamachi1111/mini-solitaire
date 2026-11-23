@@ -1,0 +1,34 @@
+/* Plusup Works 共通スタイル（ライト／ダーク両対応）
+   日本語が表示されない端末があるため、フォントはヒラギノを先頭にする（-apple-system を先頭にしない） */
+:root { color-scheme: light dark; --bg:#f6f6f4; --card:#ffffff; --text:#1c1c1e; --sub:#6e6e73; --line:rgba(0,0,0,.08); --accent:#0a7f45; --link:#0a66c2; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#111312; --card:#1c1f1d; --text:#f2f2f2; --sub:#9a9a9f; --line:rgba(255,255,255,.09); --accent:#4cc58a; --link:#6cb6ff; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.75;
+       font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 48px 20px 40px; }
+a { color: var(--link); }
+h1 { font-size: 30px; line-height: 1.3; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 36px 0 10px; }
+h3 { font-size: 16px; margin: 24px 0 6px; }
+p, li { font-size: 15px; }
+small, .en { color: var(--sub); font-size: 13px; }
+.lead { color: var(--sub); margin: 0 0 28px; }
+.label { font-size: 13px; color: var(--sub); font-weight: 600; letter-spacing: .08em; margin: 32px 0 10px; }
+.card { background: var(--card); border-radius: 16px; padding: 16px 20px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.list { list-style: none; margin: 0; padding: 0; background: var(--card); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.list li + li { border-top: 1px solid var(--line); }
+.row { display: flex; align-items: center; gap: 14px; padding: 14px 16px; color: inherit; text-decoration: none; }
+.row:hover { background: var(--line); }
+.row img { width: 56px; height: 56px; border-radius: 13px; border: 1px solid var(--line); flex: none; }
+.row .text { flex: 1; min-width: 0; line-height: 1.4; }
+.row .name { display: block; font-weight: 600; font-size: 16px; }
+.row .sub { display: block; color: var(--sub); font-size: 13px; }
+.row .pill { flex: none; font-size: 13px; font-weight: 600; color: var(--accent); border: 1px solid currentColor; border-radius: 999px; padding: 3px 12px; white-space: nowrap; }
+.row .chev { flex: none; color: var(--sub); }
+.mail { font-size: 17px; font-weight: 600; }
+.back { display: inline-block; margin-top: 32px; }
+footer { color: var(--sub); font-size: 12px; text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); }
+footer a { color: var(--sub); }
