@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/play", "destination": "https://apps.apple.com/jp/app/id6760923991", "permanent": true },
+    { "source": "/play/:path*", "destination": "https://apps.apple.com/jp/app/id6760923991", "permanent": true }
+  ]
+}
