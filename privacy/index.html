@@ -266,7 +266,8 @@
 <h3>広告と外部サービス</h3>
 <p>Google AdMob（Google Mobile Ads SDK）を使用して、画面下部のバナー広告と、新しいゲームを始めたときやクリアしたときなどに画面全体に表示される広告（インタースティシャル広告）を表示します。Googleの公開資料によれば、同SDKは、IPアドレス（おおよその位置の推定に使われる場合があります）、端末やアプリに関する識別子、表示された広告などの広告データ、アプリ内の操作情報、クラッシュやパフォーマンスなどの診断情報を、広告の配信、分析、不正防止などのために取得・処理する場合があります。</p>
 <p>詳しくは<a href="https://policies.google.com/privacy?hl=ja">Googleのプライバシーポリシー</a>および<a href="https://developers.google.com/admob/ios/privacy/data-disclosure?hl=ja">Google Mobile Ads SDKのデータ開示情報</a>をご確認ください。</p>
-<p>本アプリはATT（App Tracking Transparency）による許可を求めません。Appleの仕様により、この場合、広告識別子（IDFA）は取得できません。Google Mobile Ads SDKのほかに、利用状況の解析SDKは導入していません。</p>
+<p>広告に関する同意の確認には、GoogleのUser Messaging Platform（UMP）SDKを使用します。起動時にUMPで同意情報を確認し、同意画面の表示が必要とUMPが判定した地域（EU・イギリスなど）でだけ、同意画面を表示します。同意の確認が済むまでは、広告を読み込みません。設定の変更が必要と判定された場合は、スタート画面に「広告のプライバシー設定」が表示され、選択内容を変更できます。同意画面で選択した内容は、端末内に保存され、次回以降の起動でも使われます。</p>
+<p>本アプリはATT（App Tracking Transparency）による許可を求めません。Appleの仕様により、この場合、広告識別子（IDFA）は取得できません。また、Google Mobile Ads SDKのpublisher first-party ID（同じ開発元のアプリ間で使われる識別子）を無効にしています。Google Mobile Ads SDKとUMP SDKのほかに、利用状況の解析SDKは導入していません。</p>
 <h3>アプリの更新確認</h3>
 <p>新しいバージョンがあるかを確認するため、起動時などにAppleのサービス（App Storeの公開情報）へ接続します。このとき、アプリの識別子（バンドルID）を送信します。</p>
 <h3>データの保持と削除</h3>
